@@ -1,0 +1,35 @@
+.formOne {
+    margin-top: 50px;
+    margin-bottom: 120px;
+  }
+  
+  .container {
+    width: 45%;
+  }
+  
+  .group {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      width: 100%;
+  }
+  
+  .inputLabel {
+    font-size: small;
+    color: grey;
+    margin-bottom: 5px;
+  }
+  
+  
+  .selectOne {
+    width: 10rem;
+  }
+  
+  .selectTwo {
+    width: 20rem;
+  }
+  
+  .selectThree {
+    width: 14.5rem;
+  }
