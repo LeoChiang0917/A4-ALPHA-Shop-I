@@ -15,10 +15,13 @@ export default function Main () {
          <StepProgress/>
          </div>
           <section className={styles.formContainer}>
-          <StepOne/> 
+          <div>
+          <StepOne/>
+          <ProgressControl/>
+          </div> 
           <CartSheet/>
-        </section>
-        <ProgressControl/>
+        </section>  
+        
       </div>
     );
   }
