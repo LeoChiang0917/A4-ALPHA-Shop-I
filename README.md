@@ -15,6 +15,7 @@
 2.開啟terminal
 
 `cd ALPHA-SHOP`
+
 3.安裝npm套件
 
 `npm install`
