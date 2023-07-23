@@ -19,17 +19,21 @@
     font-size: small;
     color: grey;
     margin-bottom: 5px;
+    margin-right: 1.5rem;
   }
   
   
   .selectOne {
     width: 10rem;
+    margin-right: 1.5rem;
   }
   
   .selectTwo {
     width: 20rem;
+    margin-right: 1.5rem;
   }
   
   .selectThree {
     width: 14.5rem;
+    margin-right: 1.5rem;
   }

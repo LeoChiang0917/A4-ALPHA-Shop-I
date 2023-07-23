@@ -1,4 +1,5 @@
 import styles from './Step1.module.css'
+import CartSheet from '../../cart/Cart';
 export default function StepOne() {
     return (
       <>
@@ -80,6 +81,7 @@ export default function StepOne() {
             </section>
           </div>
         </form>
+        
       </>
     );
   }
