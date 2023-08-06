@@ -53,7 +53,7 @@ function CartContextProvider({children}) {
       }
    
     return(
-    <CartContext.Provider value={{currentProduct,PlushandleClick,MinushandleClick,addTotalPrice,addShippingPrice,updateShippingPrice}}>
+    <CartContext.Provider value={{currentProduct,PlushandleClick,MinushandleClick,addTotalPrice,addShippingPrice,updateShippingPrice,lastSelectedShipping}}>
        {children} 
     </CartContext.Provider>
     )

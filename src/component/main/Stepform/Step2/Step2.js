@@ -1,7 +1,28 @@
 
 import stylesTwo from './Step2.module.css'
 import { useState, useContext, useEffect } from "react";
-export default function StepTwo({setShippingFee}) {
+import { CartContext } from '../../../CartContext';
+export default function StepTwo() {
+const {lastSelectedShipping,addShippingPrice,updateShippingPrice} = useContext(CartContext)
+
+
+const [shipping,Setshipping] = useState(lastSelectedShipping)
+
+useEffect(() => {
+Setshipping(lastSelectedShipping);
+}, [lastSelectedShipping]);
+
+const handleSelectshipping = (e) =>{
+  const selectShiping = e.target.id
+  Setshipping(selectShiping)
+  if(selectShiping ==='standard'){
+    addShippingPrice(0)
+  }else if(selectShiping==='DHL'){
+    addShippingPrice(500)
+  }
+  updateShippingPrice(selectShiping)
+}
+
   return (
     <>
     <div className={stylesTwo.container}>
@@ -9,14 +30,15 @@ export default function StepTwo({setShippingFee}) {
         <h3>運送方式</h3>
         <section>
           <div className={stylesTwo.group}>
-            <label className={stylesTwo.customRadio} data-price={0}>
+            <label className={stylesTwo.customRadio} onClick={() =>addShippingPrice(0)}>
               <div className={stylesTwo.groupFirst}>
                 <div className={stylesTwo.groupOne}>
                   <input
-                    id="shipping-standard"
+                    id="standard"
                     type="radio"
                     name="shipping"
-                    defaultChecked=""
+                    checked={shipping==='standard'}
+                    onChange={handleSelectshipping}
                   />
                 </div>
                 <div className={stylesTwo.groupTwo}>
@@ -34,10 +56,15 @@ export default function StepTwo({setShippingFee}) {
             </label>
           </div>
           <div className={stylesTwo.group}>
-            <label className={stylesTwo.customRadio} data-price={500}>
+            <label className={stylesTwo.customRadio} onClick={() =>addShippingPrice(500)}>
               <div className={stylesTwo.groupFirst}>
                 <div className={stylesTwo.groupOne}>
-                  <input id="shipping-dhl" type="radio" name="shipping"/>
+                  <input 
+                  id="DHL" 
+                  type="radio" 
+                  name="shipping" 
+                  checked={shipping==='DHL'} 
+                  onChange={handleSelectshipping}/>
                 </div>
                 <div className={stylesTwo.groupTwo}>
                   <div>

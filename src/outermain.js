@@ -8,6 +8,7 @@ import StepTwo from './component/main/Stepform/Step2/Step2';
 import StepThree from './component/main/Stepform/Step3/Step3';
 import CartSheet from './component/main/cart/Cart'
 import styles from './outermain.module.css'
+import { CartContextProvider } from './component/CartContext';
 
 export default function Main () {
   const [page, satepage] = useState(1)
@@ -30,6 +31,7 @@ export default function Main () {
          currentStep={page}
          />
          </div>
+         <CartContextProvider>
           <section className={styles.formContainer}>
           <div>
         {page === 1 && <StepOne />}
@@ -43,7 +45,7 @@ export default function Main () {
           </div> 
           <CartSheet/>
         </section>  
-        
+        </CartContextProvider>
       </div>
     );
   }

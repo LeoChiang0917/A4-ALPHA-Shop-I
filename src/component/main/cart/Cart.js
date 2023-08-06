@@ -6,13 +6,11 @@ import plusIcon from '../../../asset/plus.svg'
 import { CartContext } from '../../CartContext'
 
 
-
-
 function Productdetail({Item}){
 const {PlushandleClick, MinushandleClick} = useContext(CartContext)
 return(
 <div className="productContainer" data-count="{Item.quantity}" data-price="{Item.price}">
-        <img className="imgContainer"src={Item.image} />
+        <img className="imgContainer"src={Item.img} />
         <div className="productInfo">
           <div className="productName">{Item.name}</div>
           <div className="productControlContainer">
@@ -30,12 +28,12 @@ return(
 
 
 export default function CartSheet(){
-  const {currentProduct,shippingPrice,allPrice} = useContext(CartContext)
+  const {currentProduct,shippingPrice,addTotalPrice} = useContext(CartContext)
 
     return(
        <>
        <section className='cartContainer'>
-       <h3 class="cartTitle">購物籃</h3>   
+       <h3 className="cartTitle">購物籃</h3>   
          <section className="productList" data-total-price="0">
            {currentProduct.map(item =><Productdetail
            Item = {item}
@@ -43,13 +41,13 @@ export default function CartSheet(){
            />)}
          </section>
        {/* 總結 */}
-       <section class="cartInfo">
-            <div class="text">運費</div>
-            <div class="price">{shippingPrice === 0 ? "免運" : '$'+shippingPrice}</div>
+       <section className="cartInfo">
+            <div className="text">運費</div>
+            <div className="price">{shippingPrice === 0 ? "免運" : '$'+shippingPrice}</div>
           </section>
-          <section class="cartInfoTotal">
-            <div class="text">小計</div>
-            <div class="price">{allPrice}</div>
+          <section className="cartInfoTotal">
+            <div className="text">小計</div>
+            <div className="price">{addTotalPrice()}</div>
           </section>
        </section>
        

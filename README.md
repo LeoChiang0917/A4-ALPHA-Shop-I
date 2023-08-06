@@ -4,7 +4,8 @@
 
 專案照片
 
-![image](https://github.com/LeoChiang0917/A4-ALPHA-Shop-I/assets/132338192/cc46c72f-80e0-4691-8987-f5c83f754cf2)
+![image](https://github.com/LeoChiang0917/A4-ALPHA-Shop-I/assets/132338192/4139edaa-6dca-4f7c-81db-b27bedb3b099)
+
 
 
 ## install

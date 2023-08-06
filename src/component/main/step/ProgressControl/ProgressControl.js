@@ -1,6 +1,6 @@
 import styles from './ProgressControl.module.css'
-import {ReactComponent as rightArrow} from '../../../../asset/right-arrow.svg'
-import {ReactComponent as leftArrow} from '../../../../asset/left-arrow.svg'
+import {ReactComponent as RightArrow} from '../../../../asset/right-arrow.svg'
+import {ReactComponent as LeftArrow} from '../../../../asset/left-arrow.svg'
 export default function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {
   return (
   
@@ -9,7 +9,7 @@ export default function ProgressControl({currentStep, handleClickPrev, handleCli
         <button 
         onClick={handleClickPrev}
         className={currentStep === 1 ? `${styles.start}` : `${styles.prev}`}>
-          <leftArrow className={styles.arrowLeft}/>
+          <LeftArrow className={styles.arrowLeft}/>
           上一步
         </button>
 
@@ -17,7 +17,7 @@ export default function ProgressControl({currentStep, handleClickPrev, handleCli
         onClick={handleClickNext}
         className={styles.next}>
           {currentStep === 3 ? "確認下單" : "下一步"}
-          {currentStep < 3 && <rightArrow className={styles.arrowRight}/>}
+          {currentStep < 3 && <RightArrow className={styles.arrowRight}/>}
         </button>
       </section>     
     </section>
