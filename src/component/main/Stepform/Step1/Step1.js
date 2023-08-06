@@ -1,9 +1,9 @@
 import styles from './Step1.module.css'
-import CartSheet from '../../cart/Cart';
+
 export default function StepOne() {
     return (
       <>
-        <form className={styles.formOne} data-phase="address">
+        <form className={styles.form} data-phase="address">
           <h3 className="form-title">寄送地址</h3>
           <div className={styles.container}>
             <section className="form-body">

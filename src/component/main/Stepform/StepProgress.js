@@ -1,13 +1,13 @@
-import "./StepProgress.css";
+import  "./StepProgress.css";
 
-export default function StepProgress() {
+export default function StepProgress({currentStep}) {
     return (
       <div>   
         <h2 class='registerTitle'>結帳</h2>
   
         <section class='progressContainer'>
   
-          <span class='currentGroup' data-phase="address">
+          <span class={currentStep===1? `currentGroup` : `progressGroup`} data-phase="address">
             <span class='progressIcon'>
               <span class='text'>1</span>
               {/* <CheckIcon className={styles.checkIcon}/> */}
@@ -17,7 +17,7 @@ export default function StepProgress() {
   
           <span class='progressBar' data-order="1"></span>
   
-          <span class='progressGroup' data-phase="shipping">
+          <span class={currentStep===2? `currentGroup` : `progressGroup`} data-phase="shipping">
             <span class='progressIcon'>
               <span class='text'>2</span>
             </span>
@@ -26,7 +26,7 @@ export default function StepProgress() {
   
           <span class='progressBar' data-order="2"></span>
   
-          <span class='progressGroup' data-phase="credit-card">
+          <span class={currentStep===3? `currentGroup` : `progressGroup`} data-phase="credit-card">
             <span class='progressIcon'>
               <span class='text'>3</span>
             </span>

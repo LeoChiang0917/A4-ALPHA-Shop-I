@@ -1,6 +1,7 @@
-.formOne {
-    margin-top: 50px;
-    margin-bottom: 120px;
+.form {
+  width:540px;
+  height:430px;
+  border-bottom: 1px solid gray;
   }
   
   .container {

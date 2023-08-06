@@ -51,5 +51,9 @@
     display: block;
   }
   
-  
+  .form {
+    width:540px;
+    height:430px;
+    border-bottom: 1px solid gray;
+  }
    

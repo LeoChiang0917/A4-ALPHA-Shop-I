@@ -1,40 +1,45 @@
-import styles from './Step1.module.css'
-import stylesThree from './Step3.module.css'
+import stylesThree from "./Step3.module.css"
 
-export default function StepThree() {
+
+function StepThree () {
+
   return (
-    <>
-    <div className={styles.container}>
-        <form className={styles.formOne} data-phase="credit-card">
-          <h3>付款資訊</h3>
-          <section>
-            <div>
-                <div>
-                <div className={styles.inputLabel}>持卡人姓名</div>
-                <input className={stylesThree.groupFirst}
-                type="text" placeholder="John Doe" />
-              </div>
-            </div>
-            <div>
-              <div>
-                <div className={styles.inputLabel}>卡號</div>
-                <input className={stylesThree.groupFirst}
-                type="text" placeholder="1111 2222 3333 4444" />
-              </div>
-            </div>
-            <div className={styles.group}> 
-              <div>
-                <div className={styles.inputLabel}>有效期限</div>
-                <input className={styles.selectThree} type="text" placeholder="MM/YY" />
-              </div>
-              <div>
-                <div className={styles.inputLabel}>CVC / CCV</div>
-                <input className={styles.selectThree} type="text" placeholder={123} />
-              </div>
-            </div>
-          </section>
-        </form>
-      </div>
-    </>
-  );
+
+    <form  data-phase="credit-card">
+              <h3 class={stylesThree.formTitle}>付款資訊</h3>
+              <section class={stylesThree.formBody}>
+
+                <div class={stylesThree.inputLine1}>
+                  <div class={stylesThree.inputGroup}>
+                    <div class={stylesThree.inputLabel}>持卡人姓名</div>
+                    <input class={stylesThree.inputStyle} type="text" placeholder="John Doe" />
+                  </div>
+                </div>
+
+                <div class={stylesThree.inputLine2}>
+                  <div class={stylesThree.inputGroup}>
+                    <div class={stylesThree.inputLabel}>卡號</div>
+                    <input class={stylesThree.inputStyle} type="text" placeholder="1111 2222 3333 4444" />
+                  </div>
+                </div>
+
+                <div class={stylesThree.inputLine3}>
+                  <div class={stylesThree.inputGroup}>
+                    <div class={stylesThree.inputLabel}>有效期限</div>
+                    <input class={stylesThree.inputStyle} type="text" placeholder="MM/YY" />
+                  </div>
+
+                  <div class={stylesThree.inputGroup}>
+                    <div class={stylesThree.inputLabel}>CVC / CCV</div>
+                    <input class={stylesThree.inputStyle} type="text" placeholder="123" />
+                  </div>
+                </div>
+
+              </section>
+            </form>
+
+  )
 }
+
+
+export default StepThree;

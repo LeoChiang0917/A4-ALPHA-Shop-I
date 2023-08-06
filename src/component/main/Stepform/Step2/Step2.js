@@ -1,11 +1,11 @@
-import styles from './Step1.module.css'
-import stylesTwo from './Step2.module.css'
 
-export default function StepTwo() {
+import stylesTwo from './Step2.module.css'
+import { useState, useContext, useEffect } from "react";
+export default function StepTwo({setShippingFee}) {
   return (
     <>
-    <div className={styles.container}>
-      <form className={styles.formOne} data-phase="shipping">
+    <div className={stylesTwo.container}>
+      <form className={stylesTwo.form} data-phase="shipping">
         <h3>運送方式</h3>
         <section>
           <div className={stylesTwo.group}>
@@ -37,7 +37,7 @@ export default function StepTwo() {
             <label className={stylesTwo.customRadio} data-price={500}>
               <div className={stylesTwo.groupFirst}>
                 <div className={stylesTwo.groupOne}>
-                  <input id="shipping-dhl" type="radio" name="shipping" />
+                  <input id="shipping-dhl" type="radio" name="shipping"/>
                 </div>
                 <div className={stylesTwo.groupTwo}>
                   <div>

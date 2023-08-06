@@ -1,28 +1,53 @@
+.progressControlContainer {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid #E6E6EB;
+}
+
+.buttonGroup1 {
+  justify-content: end;
+}
+
+
+.next, .prev {
+  display: flex;
+  align-items: center;
+  width: 174px;
+  height: 46px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .next {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    
-  }
-  
-  .back {
-    width: 45%;
-    display: flex;
-    ;
-  }
-  
-  hr {
-    margin: 0;
-    margin-bottom: 25px;
-    width: 100%;
-    border: none;
-    height: 1px;
-    background: rgba(128, 128, 128, 0.2);
-  }
-  
-  .buttonTwo {
-    color: #fff;
-    background-color: gray;
-    display: flex;  
-    justify-content: space-evenly;
-  }
+  justify-content: center;
+  background-color: #f67599;
+  color: white;
+}
+
+.prev {
+  justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+.start {
+  visibility: hidden;
+}
+
+.arrowLeft {
+  fill: black;
+  margin-right: 12px;
+}
+
+.arrowRight {
+  margin-left: 12px;
+}
