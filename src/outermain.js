@@ -9,7 +9,7 @@ import StepThree from './component/main/Stepform/Step3/Step3';
 import CartSheet from './component/main/cart/Cart'
 import styles from './outermain.module.css'
 import { CartContextProvider } from './component/CartContext';
-
+import { CardInfoprovider } from './component/FormContext';
 export default function Main () {
   const [page, satepage] = useState(1)
   function handleClickBack(){
@@ -33,6 +33,7 @@ export default function Main () {
          </div>
          <CartContextProvider>
           <section className={styles.formContainer}>
+          <CardInfoprovider>
           <div>
         {page === 1 && <StepOne />}
         {page === 2 && <StepTwo />}
@@ -43,6 +44,7 @@ export default function Main () {
           handleClickPrev={handleClickBack}
           />
           </div> 
+          </CardInfoprovider>
           <CartSheet/>
         </section>  
         </CartContextProvider>

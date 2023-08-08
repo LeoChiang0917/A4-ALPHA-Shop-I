@@ -7,7 +7,7 @@ function CartContextProvider({children}) {
     const [currentProduct, setCurrentProduct] = useState(product)
     const [shippingPrice, setShippingPrice] = useState(0)
     const [lastSelectedShipping, setLastSelectedShipping] = useState("standard")
-    const allPrice = addTotalPrice()
+
 
     function PlushandleClick(dataId){
         const plusItem = currentProduct.map((plus) =>{
@@ -53,7 +53,7 @@ function CartContextProvider({children}) {
       }
    
     return(
-    <CartContext.Provider value={{currentProduct,PlushandleClick,MinushandleClick,addTotalPrice,addShippingPrice,updateShippingPrice,lastSelectedShipping}}>
+    <CartContext.Provider value={{shippingPrice,currentProduct,PlushandleClick,MinushandleClick,addTotalPrice,addShippingPrice,updateShippingPrice,lastSelectedShipping}}>
        {children} 
     </CartContext.Provider>
     )

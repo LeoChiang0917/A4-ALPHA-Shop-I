@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import './Cart.css'
-import {product} from './Data'
 import minusIcon from '../../../asset/minus.svg'
 import plusIcon from '../../../asset/plus.svg'
 import { CartContext } from '../../CartContext'
@@ -10,7 +9,7 @@ function Productdetail({Item}){
 const {PlushandleClick, MinushandleClick} = useContext(CartContext)
 return(
 <div className="productContainer" data-count="{Item.quantity}" data-price="{Item.price}">
-        <img className="imgContainer"src={Item.img} />
+        <img className="imgContainer"src={Item.img} alt='imgContainer'/>
         <div className="productInfo">
           <div className="productName">{Item.name}</div>
           <div className="productControlContainer">

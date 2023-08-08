@@ -1,7 +1,24 @@
 import styles from './ProgressControl.module.css'
 import {ReactComponent as RightArrow} from '../../../../asset/right-arrow.svg'
 import {ReactComponent as LeftArrow} from '../../../../asset/left-arrow.svg'
+import { FormContext } from '../../../FormContext'
+import { CartContext } from '../../../CartContext'
+
+import {useContext } from 'react'
 export default function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {
+  const {formInfo} = useContext(FormContext)
+  const {addTotalPrice} = useContext(CartContext)
+  
+  function handleConfirm(){
+   console.log(`
+   總金額:${addTotalPrice()}
+   持卡人姓名：${formInfo.cardName}
+   卡號:${formInfo.cardNumber}
+   有效期限：${formInfo.cardExpireDate}
+   CVC/CCV：${formInfo.cardCVC}
+   `);
+  }
+
   return (
   
     <section className={styles.progressControlContainer}>
@@ -14,7 +31,7 @@ export default function ProgressControl({currentStep, handleClickPrev, handleCli
         </button>
 
         <button 
-        onClick={handleClickNext}
+        onClick={currentStep === 3? handleConfirm :handleClickNext}
         className={styles.next}>
           {currentStep === 3 ? "確認下單" : "下一步"}
           {currentStep < 3 && <RightArrow className={styles.arrowRight}/>}
