@@ -3,7 +3,12 @@ import { FormContext } from "../../../FormContext"
 import {useContext } from 'react'
 
 function StepThree () {
-const {handleCardinfo} = useContext(FormContext)
+const {SetformInfo, formInfo} = useContext(FormContext)
+
+function handleCardinfo(e){
+  SetformInfo({...formInfo, [e.target.name]:e.target.value })
+
+}
   return (
 
     <form  data-phase="credit-card">
@@ -16,7 +21,7 @@ const {handleCardinfo} = useContext(FormContext)
                     <input className={stylesThree.inputStyle} 
                     type="text" 
                     placeholder="John Doe" 
-                    onChange={(e) => handleCardinfo(e)}/>
+                    onChange={e => handleCardinfo(e)}/>
                   </div>
                 </div>
 
@@ -26,7 +31,7 @@ const {handleCardinfo} = useContext(FormContext)
                     <input className={stylesThree.inputStyle} 
                     type="text" 
                     placeholder="1111 2222 3333 4444" 
-                    onChange={(e) =>handleCardinfo(e)}/>
+                    onChange={e =>handleCardinfo(e)}/>
                   </div>
                 </div>
 
@@ -37,7 +42,7 @@ const {handleCardinfo} = useContext(FormContext)
                     className={stylesThree.inputStyle} 
                     type="text" 
                     placeholder="MM/YY" 
-                    onChange={(e) =>handleCardinfo(e)}/>
+                    onChange={e =>handleCardinfo(e)}/>
                   </div>
 
                   <div className={stylesThree.inputGroup}>
@@ -45,7 +50,7 @@ const {handleCardinfo} = useContext(FormContext)
                     <input className={stylesThree.inputStyle} 
                     type="text" 
                     placeholder="123" 
-                    onChange={(e) =>handleCardinfo(e)}/>
+                    onChange={e =>handleCardinfo(e)}/>
                   </div>
                 </div>
 
