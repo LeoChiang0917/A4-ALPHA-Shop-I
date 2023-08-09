@@ -1,4 +1,4 @@
-import logoIcon from '../../asset/logo.svg'
+import logoIcon from'../../asset/logo.svg'
 import moonIcon from '../../asset/moon.svg'
 import cartIcon from '../../asset/cart.svg'
 import searchIcon from '../../asset/search.svg'
