@@ -1,6 +1,8 @@
 import styles from './Step1.module.css'
 
 export default function StepOne() {
+  
+
     return (
       <>
         <form className={styles.form} data-phase="address">
@@ -11,7 +13,7 @@ export default function StepOne() {
                 <div>
                   <div className={styles.inputLabel}>稱謂</div>
                   <div className="select-container">
-                    <select className={styles.selectOne}>
+                    <select className={styles.selectOne} defaultValue ="mr">
                       <option value="mr" selected="">
                         先生
                       </option>
@@ -39,7 +41,7 @@ export default function StepOne() {
                 <div>
                   <div className={styles.inputLabel}>縣市</div>
                   <div className="select-container">
-                    <select className={styles.selectOne} required="">
+                    <select className={styles.selectOne} required="" defaultValue ="">
                       <option value="">請選擇縣市</option>
                       <option value="KLU">基隆市</option>
                       <option value="TPH">新北市</option>

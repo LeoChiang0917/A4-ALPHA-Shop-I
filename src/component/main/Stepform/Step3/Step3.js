@@ -7,8 +7,9 @@ const {SetformInfo, formInfo} = useContext(FormContext)
 
 function handleCardinfo(e){
   SetformInfo({...formInfo, [e.target.name]:e.target.value })
-
+  
 }
+
   return (
 
     <form  data-phase="credit-card">
@@ -20,7 +21,8 @@ function handleCardinfo(e){
                     <div className={stylesThree.inputLabel}>持卡人姓名</div>
                     <input className={stylesThree.inputStyle} 
                     type="text" 
-                    placeholder="John Doe" 
+                    placeholder="John Doe"
+                    name="cardName" 
                     onChange={e => handleCardinfo(e)}/>
                   </div>
                 </div>
@@ -30,6 +32,7 @@ function handleCardinfo(e){
                     <div className={stylesThree.inputLabel}>卡號</div>
                     <input className={stylesThree.inputStyle} 
                     type="text" 
+                    name="cardNumber"
                     placeholder="1111 2222 3333 4444" 
                     onChange={e =>handleCardinfo(e)}/>
                   </div>
@@ -41,6 +44,7 @@ function handleCardinfo(e){
                     <input 
                     className={stylesThree.inputStyle} 
                     type="text" 
+                    name="cardExpireDate"
                     placeholder="MM/YY" 
                     onChange={e =>handleCardinfo(e)}/>
                   </div>
@@ -49,6 +53,7 @@ function handleCardinfo(e){
                     <div className={stylesThree.inputLabel}>CVC / CCV</div>
                     <input className={stylesThree.inputStyle} 
                     type="text" 
+                    name="cardCVC"
                     placeholder="123" 
                     onChange={e =>handleCardinfo(e)}/>
                   </div>
