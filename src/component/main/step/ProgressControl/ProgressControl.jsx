@@ -1,8 +1,8 @@
 import styles from './ProgressControl.module.css'
 import {ReactComponent as RightArrow} from '../../../../asset/right-arrow.svg'
 import {ReactComponent as LeftArrow} from '../../../../asset/left-arrow.svg'
-import { FormContext } from '../../../FormContext'
-import { CartContext } from '../../../CartContext'
+import { FormContext } from 'component/Context/FormContext'
+import { CartContext } from 'component/Context/CartContext'
 import {useContext } from 'react'
 
 export default function ProgressControl({currentStep, handleClickPrev, handleClickNext}) {

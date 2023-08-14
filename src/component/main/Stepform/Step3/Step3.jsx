@@ -1,5 +1,5 @@
 import stylesThree from "./Step3.module.css"
-import { FormContext } from "../../../FormContext"
+import { FormContext } from "component/Context/FormContext"
 import {useContext } from 'react'
 
 function StepThree () {

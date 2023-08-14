@@ -2,7 +2,7 @@ import logoIcon from'../../asset/logo.svg'
 import moonIcon from '../../asset/moon.svg'
 import cartIcon from '../../asset/cart.svg'
 import searchIcon from '../../asset/search.svg'
-import './header.css'
+import './Header.css'
 export default function Header(){
 return(
    <div className='header'>

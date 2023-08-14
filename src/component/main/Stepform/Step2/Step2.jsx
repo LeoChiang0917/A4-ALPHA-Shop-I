@@ -1,7 +1,7 @@
 
 import stylesTwo from './Step2.module.css'
 import { useState, useContext, useEffect } from "react";
-import { CartContext } from '../../../CartContext';
+import { CartContext } from 'component/Context/CartContext';
 export default function StepTwo() {
 const {lastSelectedShipping,addShippingPrice,updateShippingPrice} = useContext(CartContext)
 
