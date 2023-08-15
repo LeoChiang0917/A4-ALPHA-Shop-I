@@ -12,7 +12,7 @@
 
 1.打開terminal，Clone 此專案至本機電腦
 
-`git clone https://github.com/Keely1112/ALPHA-SHOP.git`
+`git clone https://github.com/LeoChiang0917/A4-ALPHA-Shop-I.git
 
 2.開啟terminal
 
