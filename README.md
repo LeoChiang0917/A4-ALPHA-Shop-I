@@ -24,7 +24,7 @@
 
 4.開啟專案
 
-`npm run dev`
+`npm run start`
 
 5.出現以下內容表示伺服器已啟動
 
