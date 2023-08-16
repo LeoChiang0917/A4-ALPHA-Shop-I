@@ -1,5 +1,5 @@
 import { createContext, useState } from "react"
-import { product } from "component/main/Cart/Data"
+import { product } from "component/Cart/Data"
 
 const CartContext = createContext()
 
@@ -9,7 +9,7 @@ function CartContextProvider({children}) {
     const [lastSelectedShipping, setLastSelectedShipping] = useState("standard")
 
 
-    function PlushandleClick(dataId){
+    function plusHandleClick(dataId){
         const plusItem = currentProduct.map((plus) =>{
           if(plus.id===dataId){
             return {
@@ -23,7 +23,7 @@ function CartContextProvider({children}) {
         setCurrentProduct(plusItem);
        }
     
-       function MinushandleClick(dataId){
+       function minusHandleClick(dataId){
         const minusItem = currentProduct.map((minus) =>{
           if(minus.id===dataId){
             return {
@@ -37,12 +37,7 @@ function CartContextProvider({children}) {
         setCurrentProduct(minusItem.filter(p => p.quantity > 0));
       }
 
-      function addTotalPrice(){
-        const totalPrice = currentProduct.reduce((total,product) =>{
-          return total+(product.quantity*product.price)
-        },0)
-        return totalPrice + shippingPrice;
-      }
+      
 
       function addShippingPrice(price) {
         setShippingPrice(price)
@@ -53,7 +48,7 @@ function CartContextProvider({children}) {
       }
    
     return(
-    <CartContext.Provider value={{shippingPrice,currentProduct,PlushandleClick,MinushandleClick,addTotalPrice,addShippingPrice,updateShippingPrice,lastSelectedShipping}}>
+    <CartContext.Provider value={{shippingPrice,currentProduct,plusHandleClick,minusHandleClick,addShippingPrice,updateShippingPrice,lastSelectedShipping}}>
        {children} 
     </CartContext.Provider>
     )

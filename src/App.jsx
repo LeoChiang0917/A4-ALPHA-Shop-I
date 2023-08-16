@@ -1,6 +1,6 @@
 import { CartContextProvider } from 'component/Context/CartContext';
 import { CardInfoprovider } from 'component/Context/FormContext';
-import Main from 'component/Outermain/Outermain';
+import Main from 'component/Main/Main';
  
 export function App () {
   return (

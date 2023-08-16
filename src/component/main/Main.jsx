@@ -1,13 +1,13 @@
 
 import { useState } from 'react'
 import Header from 'component/Header/Header';
-import ProgressControl from 'component/main/step/ProgressControl/ProgressControl';
-import StepProgress from 'component/main/Stepform/StepProgress';
-import StepOne from 'component/main/Stepform/Step1/Step1';
-import StepTwo from 'component/main/Stepform/Step2/Step2';
-import StepThree from 'component/main/Stepform/Step3/Step3';
-import CartSheet from 'component/main/Cart/Cart';
-import styles from './Outermain.module.css'
+import ProgressControl from 'component/ProgressControl/ProgressControl';
+import StepProgress from 'component/Stepform/StepProgress';
+import StepOne from 'component/Stepform/Step1/Step1';
+import StepTwo from 'component/Stepform/Step2/Step2';
+import StepThree from 'component/Stepform/Step3/Step3';
+import CartSheet from 'component/Cart/Cart';
+import styles from './Main.module.css'
 
 export default function Main () {
   const [page, setepage] = useState(1)
