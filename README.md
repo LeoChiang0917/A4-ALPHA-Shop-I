@@ -4,7 +4,8 @@
 
 專案照片
 
-![image](https://github.com/LeoChiang0917/A4-ALPHA-Shop-I.git)
+![image](https://github.com/LeoChiang0917/A4-ALPHA-Shop-I/assets/132338192/d457d411-d64a-4f73-b535-85554c1be9eb)
+
 
 
 
